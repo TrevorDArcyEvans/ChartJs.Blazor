@@ -53,29 +53,29 @@
             }
         };
 
-        var data = new List<GanttData<double>>(
+        var data = new List<GanttDateTimeData>(
             new[]
             {
-                new GanttData<double>
+                new GanttDateTimeData
                 {
-                    X = new GanttInterval<double>
+                    X = new GanttDateTimeInterval
                     {
-                        From = new DateTime(2006, 2, 20, 6, 3, 30).ToJavascript(),
-                        To = new DateTime(2006, 2, 20, 8, 15, 30).ToJavascript()
+                        From = new DateTime(2006, 2, 20, 6, 3, 30),
+                        To = new DateTime(2006, 2, 20, 8, 15, 30)
                     },
                     Y = 0.3
                 },
-                new GanttData<double>
+                new GanttDateTimeData
                 {
-                    X = new GanttInterval<double>
+                    X = new GanttDateTimeInterval
                     {
-                        From = new DateTime(2006, 2, 20, 12, 30, 30).ToJavascript(),
-                        To = new DateTime(2006, 2, 20, 13, 35, 30).ToJavascript()
+                        From = new DateTime(2006, 2, 20, 12, 30, 30),
+                        To = new DateTime(2006, 2, 20, 13, 35, 30)
                     },
                     Y = 0.5
                 }
             });
-        IDataset<GanttData<double>> dataset1 = new GanttDataset<GanttData<double>>(data)
+        IDataset<GanttDateTimeData> dataset1 = new GanttDateTimeDataset(data)
         {
             Label = "My first dataset",
             BackgroundColor = ColorUtil.FromDrawingColor(Color.FromArgb(128, ChartColors.Red)),
@@ -86,4 +86,5 @@
 
         _config.Data.Datasets.Add(dataset1);
     }
+
 }

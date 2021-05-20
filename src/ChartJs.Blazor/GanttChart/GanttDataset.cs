@@ -1,6 +1,5 @@
 ﻿using ChartJs.Blazor.Common;
 using ChartJs.Blazor.Common.Enums;
-using ChartJs.Blazor.Util;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using ChartJs.Blazor.BarChart;
@@ -49,6 +48,19 @@ namespace ChartJs.Blazor.GanttChart
         [JsonProperty("height")]
         public double Height { get; set; } = 0.125f;
 
+        /// <summary>
+        /// format for time scale:
+        ///     string "xd yh zm ps qms",
+        ///     object {d: x, h: y, m: z, s: p, ms:1} or
+        ///     number - milliseconds
+        /// where:
+        ///     d: number of days,
+        ///     h: number of hours,
+        ///     m: number of minutes,
+        ///     s: number of seconds,
+        ///     ms: number of milliseconds.
+        /// if the field is missing, then then is considered to be zero
+        /// </summary>
         [JsonProperty("width")]
         public object Width { get; set; }
     }
