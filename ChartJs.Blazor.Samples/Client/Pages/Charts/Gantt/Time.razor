@@ -34,14 +34,13 @@
                         {
                             new GanttTimeAxis
                             {
-                                ID = "letmein",
                                 Display = AxisDisplay.True,
                                 Position = Position.Bottom,
                                 Time = new TimeOptions
                                 {
                                     DisplayFormats = new Dictionary<TimeMeasurement, string>
                                     {
-                                        { TimeMeasurement.Millisecond, "HH:mm:ss" },
+                                        { TimeMeasurement.Millisecond, "HH:mm:ss SSS" },
                                         { TimeMeasurement.Second, "HH:mm:ss" },
                                         { TimeMeasurement.Minute, "HH:mm:ss" },
                                         { TimeMeasurement.Hour, "HH:mm:ss" },
@@ -54,29 +53,29 @@
             }
         };
 
-        var data = new List<GanttData<DateTime>>(
+        var data = new List<GanttData<double>>(
             new[]
             {
-                new GanttData<DateTime>
+                new GanttData<double>
                 {
-                    X = new GanttInterval<DateTime>
+                    X = new GanttInterval<double>
                     {
-                        From = new DateTime(2006, 2, 20, 6, 3, 30),
-                        To = new DateTime(2006, 2, 20, 8, 15, 30)
+                        From = new DateTime(2006, 2, 20, 6, 3, 30).ToJavascript(),
+                        To = new DateTime(2006, 2, 20, 8, 15, 30).ToJavascript()
                     },
                     Y = 0.3
                 },
-                new GanttData<DateTime>
+                new GanttData<double>
                 {
-                    X = new GanttInterval<DateTime>
+                    X = new GanttInterval<double>
                     {
-                        From = new DateTime(2006, 2, 20, 12, 30, 30),
-                        To = new DateTime(2006, 2, 20, 13, 35, 30)
+                        From = new DateTime(2006, 2, 20, 12, 30, 30).ToJavascript(),
+                        To = new DateTime(2006, 2, 20, 13, 35, 30).ToJavascript()
                     },
                     Y = 0.5
                 }
             });
-        IDataset<GanttData<DateTime>> dataset1 = new GanttDataset<GanttData<DateTime>>(data)
+        IDataset<GanttData<double>> dataset1 = new GanttDataset<GanttData<double>>(data)
         {
             Label = "My first dataset",
             BackgroundColor = ColorUtil.FromDrawingColor(Color.FromArgb(128, ChartColors.Red)),
