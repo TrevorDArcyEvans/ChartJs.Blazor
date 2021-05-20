@@ -39,6 +39,10 @@
       {
         "Title": "Time",
         "Path": "charts/gantt/time"
+      },
+      {
+        "Title": "Time (milliseconds)",
+        "Path": "charts/gantt/time_ms"
       }
     ]
   },
