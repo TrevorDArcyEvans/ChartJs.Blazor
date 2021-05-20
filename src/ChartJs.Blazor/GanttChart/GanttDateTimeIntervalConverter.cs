@@ -1,11 +1,11 @@
-using System;
 using System.Linq;
+using ChartJs.Blazor.Common;
 using ChartJs.Blazor.Common.Time;
 using Newtonsoft.Json;
 
 namespace ChartJs.Blazor.GanttChart
 {
-    public class GanttDateTimeIntervalConverter : JsonConverter<GanttDateTimeInterval>
+    internal class GanttDateTimeIntervalConverter : JsonWriteOnlyConverter<GanttDateTimeInterval>
     {
         private readonly string FromName = typeof(GanttDateTimeInterval)
             .GetProperty(nameof(GanttDateTimeInterval.From))
@@ -30,7 +30,5 @@ namespace ChartJs.Blazor.GanttChart
             writer.WriteValue(value.To.ToJavascript());
             writer.WriteEndObject();
         }
-
-        public override GanttDateTimeInterval ReadJson(JsonReader reader, Type objectType, GanttDateTimeInterval existingValue, bool hasExistingValue, JsonSerializer serializer) => throw new NotImplementedException();
     }
 }
