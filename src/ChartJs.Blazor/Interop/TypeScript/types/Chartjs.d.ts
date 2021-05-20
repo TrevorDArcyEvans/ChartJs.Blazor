@@ -15,9 +15,9 @@
 //                 Alexandros Dorodoulis <https://github.com/alexdor>
 //                 Manuel Heidrich <https://github.com/mahnuh>
 //                 Conrad Holtzhausen <https://github.com/Conrad777>
-//                 Adrián Caballero <https://github.com/adripanico>
+//                 Adriï¿½n Caballero <https://github.com/adripanico>
 //                 wertzui <https://github.com/wertzui>
-//                 Martin Trobäck <https://github.com/lekoaf>
+//                 Martin Trobï¿½ck <https://github.com/lekoaf>
 //                 Elian Cordoba <https://github.com/ElianCordoba>
 //                 Takuya Uehara <https://github.com/indigolain>
 //                 Ricardo Mello <https://github.com/ricardo-mello>
@@ -99,6 +99,7 @@ declare class Chart {
         [key: string]: Chart;
     };
 }
+
 declare class PluginServiceStatic {
     register(plugin: Chart.PluginServiceGlobalRegistration & Chart.PluginServiceRegistrationOptions): void;
     unregister(plugin: Chart.PluginServiceGlobalRegistration & Chart.PluginServiceRegistrationOptions): void;
@@ -158,7 +159,7 @@ interface Model {
 }
 
 declare namespace Chart {
-    type ChartType = 'line' | 'bar' | 'horizontalBar' | 'radar' | 'doughnut' | 'polarArea' | 'bubble' | 'pie' | 'scatter';
+    type ChartType = 'line' | 'bar' | 'horizontalBar' | 'radar' | 'doughnut' | 'polarArea' | 'bubble' | 'pie' | 'scatter' | 'gantt';
 
     type TimeUnit = 'millisecond' | 'second' | 'minute' | 'hour' | 'day' | 'week' | 'month' | 'quarter' | 'year';
 
