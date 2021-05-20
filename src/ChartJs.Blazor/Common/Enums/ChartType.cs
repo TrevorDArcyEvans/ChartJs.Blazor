@@ -51,6 +51,11 @@
         public static ChartType Scatter => new ChartType("scatter");
 
         /// <summary>
+        /// The Gantt chart type.
+        /// </summary>
+        public static ChartType Gantt => new ChartType("gantt");
+
+        /// <summary>
         /// This method constructs a <see cref="ChartType" /> which represents the given value.
         /// Only use this method if you're implementing your own chart e.g. for a Chart.js
         /// extension. Otherwise use the static properties.

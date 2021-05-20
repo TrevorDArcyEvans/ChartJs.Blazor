@@ -30,6 +30,19 @@
     ]
   },
   {
+    "Title": "Gantt charts",
+    "Samples": [
+      {
+        "Title": "Number",
+        "Path": "charts/gantt/number"
+      },
+      {
+        "Title": "Time",
+        "Path": "charts/gantt/time"
+      }
+    ]
+  },
+  {
     "Title": "Other charts",
     "Samples": [
       {

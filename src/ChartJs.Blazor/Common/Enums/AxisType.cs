@@ -43,6 +43,7 @@
         /// </summary>
         public static AxisType Time => new AxisType("time");
 
+        public static AxisType Gantt => new AxisType("time-gantt");
 
         private AxisType(string stringRep) : base(stringRep) { }
     }
